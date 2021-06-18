@@ -38,10 +38,10 @@ fi
 
 #Set icon size
 echo "Pick an icon size: (larger icons look better on bigger and denser displays)"
-read -p "${bold}1: small (128px-48px)${normal}, 2: medium (256px-96px), 3: large (384px-144px), 4: extra-large (512px-192px): " size_select
+read -p "1: small (128px-48px), 2: medium (256px-96px), 3: large (384px-144px), ${bold}4: extra-large (512px-192px)${normal}: " size_select
 if test -z "$size_select";
 then
-    size_select=1
+    size_select=4
 fi
 case "$size_select" in
     1)
@@ -71,10 +71,10 @@ echo
 
 #Set theme color
 echo "Select a theme color"
-read -p "${bold}1: light${normal}, 2: dark: " theme_select
+read -p "1: light${bold}, 2: dark${normal}: " theme_select
 if test -z "$theme_select";
 then
-    theme_select=1
+    theme_select=2
 fi
 case "$theme_select" in
     1)
